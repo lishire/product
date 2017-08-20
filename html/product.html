@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        #product_content{
+            width: 1903px;
+            height: 501px;
+            background-color: white;
+        }
+
+        #nav div{
+            text-align: center;
+            font-size: 14px;
+            line-height: 261px;
+            color: #2597ba;
+        }
+        #product_content ul{
+            list-style-type: none;
+        }
+        #nav #approve{
+            float: left;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            /*background: url(../img/protect_images/icon29.png);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+        }
+        #nav #approve a{
+            /*display: none;*/
+        }
+        #nav #approve a>div{
+            width: 150px;
+            height: 150px;
+            border: 1px solid brown;
+            background-color: #2597ba;
+        }
+        #nav #approve .product_approve{
+            background: url(../img/protect_images/icon29.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #nav span{
+            display: block;
+            width: 75%;
+            height: 30px;
+
+        }
+        #nav #approve span{
+            background: url(../img/protect_images/icon35.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #nav >#approve:hover>a>.product_approve{
+            background: url(../img/protect_images/icon32.png);
+        }
+        /*#nav #approve:hover{*/
+            /*background: url(../img/protect_images/icon32.png);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+        /*}*/
+        /*#nav #user{*/
+            /*float: left;*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*background: url(../img/protect_images/icon33.png);*/
+
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+        /*}*/
+        /*#nav #have{*/
+            /*float: left;*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*background: url(../img/protect_images/icon34.png);*/
+
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+        /*}*/
+       /*#approve,#have,#user{*/
+            /*float: left;*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+
+            /*border: 1px solid #2597ba;*/
+            /*background: url(../img/protect_images/icon29.png);*/
+
+
+        /*}*/
+        /*#approve{*/
+            /*margin-right: 20px;*/
+            /*background: url(../img/protect_images/icon29.png);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+        /*}*/
+        /*#user{*/
+            /*margin-right: 40px;*/
+            /*background: url(../img/protect_images/icon33.png);*/
+        /*}*/
+        /*#have{*/
+            /*background: url(../img/protect_images/icon34.png);*/
+        /*}*/
+        /*#nav ul li>div{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*background: url(../img/protect_images/icon29.png);*/
+            /*background-repeat: no-repeat;*/
+            /*background: url(../img/protect_images/icon32.png);*/
+            /*z-index: 2;*/
+        }
+        /*.product_approve{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*border: 1px solid brown;*/
+            /*background-color: #2597ba;*/
+        /*}*/
+        /*#product_content .product_approve{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*border: 1px solid brown;*/
+            /*background-color: #2597ba;*/
+            /*background: url(../img/protect_images/icon32.png);*/
+            /*background-repeat: no-repeat;*/
+        /*}*/
+        /*三个box*/
+
+        /*左右切换*/
+        .arrow{
+            font-size: 60px;
+            color: wheat;
+            line-height: 39px;
+            text-align: center;
+            background: darkcyan;
+            z-index: 5;
+            position: relative;
+            top: 234px;
+            text-decoration: none;
+        }
+
+        .arrow:hover{
+            background-color: darkgray;
+            opacity: 0.5;
+
+        }
+        #left{
+            float:left;
+            left: 260px;
+        }
+        #right{
+            float: right;
+            right: 295px;
+        }
+        #product_lunbo{
+            width: 1903px;
+            height: 501px;
+            background-color: #2597BA;
+        }
+        #product_shenpi,#product_user,#product_have{
+            width: 1255px;
+            height: 395px;
+            /*font-size: 16px;*/
+            color: white;
+            border: 1px solid brown;
+            background: #2597BA;
+            position: relative;
+            /*top: 50px;*/
+            /*left: 260px;*/
+            float: left;
+        }
+        #product_shenpi-font,#product_user-font,#product_have-font span{
+            color: white;
+            font-size: 20px;
+            display: block;
+
+        }
+        /*审批span文字*/
+        #product_shenpi-font span a{
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        #product_user-font span a{
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        #product_have-font span a{
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        /*审批p文字*/
+        #product_shenpi-font p{
+            display: block;
+            width: 496px;
+            height: 181px;
+            border: 1px solid green;
+            font-size: 14px;
+            line-height: 28px;;
+        }
+
+        /*审批图片*/
+        .product_shenpi-pic{
+            float: left;
+            width: 526px;
+            height: 290px;
+            border: 1px solid purple;
+            position: absolute;
+            top: 81px;
+            right: 25px;
+        }
+        /*账户p文字*/
+        #product_user-font p{
+            display: block;
+            width: 496px;
+            height: 97px;
+            border: 1px solid red;
+            font-size: 14px;
+            /*float: left;*/
+        }
+        /*账户图片*/
+        .product_user-pic{
+
+            float: left;
+            width: 526px;
+            height: 290px;
+            border: 1px solid purple;
+            /*background: darkcyan;*/
+            position: relative;
+            top: -307px;
+            left: 642px;
+        }
+        /*催收p文字*/
+        #product_have-font p{
+            display: block;
+            width: 496px;
+            height: 97px;
+            border: 1px solid red;
+            line-height: 26px;
+            font-size: 14px;
+        }
+        /*催收图片*/
+        .product_have-pic{
+            float: left;
+            width: 526px;
+            height: 290px;
+            border: 1px solid purple;
+            /*background: darkcyan;*/
+            position: relative;
+            top: -221px;
+            left: 650px;
+        }
+        /*外层div*/
+        #product_lunbo-big{
+            width: 1257px;
+            height: 395px;
+            border: 1px solid brown;
+            position: relative;
+            top: 50px;
+            left: 260px;
+            /*overflow: hidden;*/
+        }
+        #product_lunbo-bignext{
+            width: 5000px;
+            height: 395px;
+            border: 1px solid chartreuse;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="product_content">
+    <div id="nav">
+    <ul>
+        <li  id="approve"class=""><a href="#">
+            <div class="product_approve">审批系统</div>
+            <span></span>
+        </a></li>
+
+        <li id="user" class=""><a href="#">
+            <div class="product_user">账户系统</div>
+            <span></span>
+        </a></li>
+
+        <li id="have" class=""><a href="#">
+            <div id="product_ahave">催收系统</div>
+            <span></span>
+        </a></li>
+    </ul>
+    </div>
+</div>
+<div id="product_lunbo">
+    <a href="#" id="left" class="arrow">&lt</a>
+    <a href="#" id="right" class="arrow">&gt</a>
+    <div id="product_lunbo-big">
+        <div id="product_lunbo-bignext">
+
+            <!--审批系统-->
+            <div id="product_shenpi">
+                <div id="product_shenpi-font">
+                    <span><a href="#">审批系统</a></span>
+                    <br/>
+                    <br/>
+
+                    <p>审批系统：提供了端到端的全套系统解决方案，从移动端获客，到审批全流程业务管理，配合自动决策平台和反欺诈模块的使用，真正实现全自动秒贷服务。
+                        除了支持传统的基于现金的个人贷款、车辆抵押贷款、房屋抵押贷款等传统业务，在消费金融领域，更是针对商户、商品、自动签约、结算、退换货等提供了一整套业务管理模块，解决消费金融复杂的多方业务关系。</p>
+
+                    <p>整个系统，流程节点组合自由、任务分配模式多样、节点跳转灵活、业务功能全面、产品参数丰富，全面支持多商户、多产品、多资方、多套流程的业务体系。</p>
+
+                </div>
+
+                <div class="product_shenpi-pic">
+                    <img src="../img/protect_images/pic18_01.png" alt=""/>
+                </div>
+            </div>
+
+             <!--财务系统-->
+            <div id="product_user">
+                <div id="product_user-font">
+                    <span><a href="#">财务系统</a></span>
+                    <br/>
+                    <br/>
+
+                    <p>账务系统：具备银行级信贷核心，支持丰富的信贷产品定义，配置化的息费设置，灵活的扣款策略，完善的入账逻辑，同时支持多支付机构和多资方的接入，提供完整的账户状态报表以及支付机构对账体系。</p>
+
+                    <p>在账户生命周期管理中，提供还款计划试算、建账、期供计算、扣款、还款、展期、减免、调账、差错处理等丰富的业务模块，同时提供标准开放的服务接口，灵活对接前端审批、后端催收等业务模块。</p>
+
+                    <p>系统支持百万级活动账务量级，提供7*24小时的实时账务处理能力，确保信贷机构不间断、大批量的业务需求。</p>
+
+
+                </div>
+
+                <div class="product_user-pic">
+                    <img src="../img/protect_images/pic18.png" alt=""/>
+                </div>
+            </div>
+
+            <!--催收系统-->
+            <div id="product_have">
+                <div id="product_have-font">
+                    <span><a href="#">催收系统</a></span>
+                    <br/>
+                    <br/>
+
+                    <p>催收系统：支持灵活的出入催定制条件与高效的案件分配和流转逻辑，完整支持预催、电话催收、上门、法催、委外、
+                        核销等主流催收手段，并可轻松集成语音外呼及短信邮件系统，切实有效地提高资产回收能力，最大程度地挽回违约损失。</p>
+
+                       <p> 神州融催收系统是专门针对信贷风险管理工作中的贷后催收管理推出的完整催收解决方案，满足信贷机构对催收过程监管
+                        的要求，在系统部署安全能力、网络安全管控、数据安全管控等方面均有高标准，保障催收业务安全、规范、各部门协调有
+                        序工作，提升催收员的成功率及效率。
+                    </p>
+
+                </div>
+
+                <div class="product_have-pic">
+                    <img src="../img/protect_images/pic18_2.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    window.onload=function(){
+        var container=document.getElementById('product_lunbo-big');
+        var list=document.getElementById('product_lunbo-bignext');
+        var left=document.getElementById('left');
+        var right=document.getElementById('right');
+
+        right.onclick=function(){
+//            console.log("111");
+            list.style.left=parseInt(list.style.left) - 1255 + "px";
+        };
+        left.onclick=function(){
+            console.log("222");
+        }
+    }
+</script>
+</body>
+</html>
